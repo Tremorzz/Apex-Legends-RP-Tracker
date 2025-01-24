@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Legends Stats Tracker</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apex Legends Stats Tracker</h1>
+        
+        <div class="rp-section">
+            <label for="starting-rp">Starting RP:</label>
+            <input type="number" id="starting-rp" placeholder="Enter your starting RP" min="0" required>
+            <button onclick="setStartingRP()">Set Starting RP</button>
+            <div id="starting-rp-feedback" class="feedback-message"></div>
+        </div>
+
+        <div class="rank-section">
+            <label for="rank">Select Rank:</label>
+            <select id="rank">
+                <option value="Rookie IV">Rookie IV</option>
+        <option value="Rookie III">Rookie III</option>
+        <option value="Rookie II">Rookie II</option>
+        <option value="Rookie I">Rookie I</option>
+        <option value="Bronze IV">Bronze IV</option>
+        <option value="Bronze III">Bronze III</option>
+        <option value="Bronze II">Bronze II</option>
+        <option value="Bronze I">Bronze I</option>
+        <option value="Silver IV">Silver IV</option>
+        <option value="Silver III">Silver III</option>
+        <option value="Silver II">Silver II</option>
+        <option value="Silver I">Silver I</option>
+        <option value="Gold IV">Gold IV</option>
+        <option value="Gold III">Gold III</option>
+        <option value="Gold II">Gold II</option>
+        <option value="Gold I">Gold I</option>
+        <option value="Platinum IV">Platinum IV</option>
+        <option value="Platinum III">Platinum III</option>
+        <option value="Platinum II">Platinum II</option>
+        <option value="Platinum I">Platinum I</option>
+        <option value="Diamond IV">Diamond IV</option>
+        <option value="Diamond III">Diamond III</option>
+        <option value="Diamond II">Diamond II</option>
+        <option value="Diamond I">Diamond I</option>
+        <option value="Master">Master</option>
+        <option value="Apex Predator">Apex Predator</option>
+            </select>
+        </div>
+
+        <div class="match-entry">
+            <input type="number" id="kills" placeholder="Kills" required>
+            <input type="number" id="assists" placeholder="Assists" required>
+            <input type="number" id="participation" placeholder="Participation" required>
+            <input type="number" id="placement" placeholder="Placement" required>
+        </div>
+
+        <button id="add-match-btn" onclick="processMatchData()">Add Match</button>
+        <div id="match-feedback" class="feedback-message"></div>
+
+        <table id="stats-table">
+            <thead>
+                <tr>
+                    <th>Kills</th>
+                    <th>Assists</th>
+                    <th>Participation</th>
+                    <th>Placement</th>
+                    <th>RP Earned</th>
+                    <th>Total RP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Stats will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

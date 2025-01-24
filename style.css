@@ -1,0 +1,167 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #3e4c59;
+    margin-bottom: 30px;
+}
+
+/* Section Styling */
+.rp-section,
+.rank-section,
+.match-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.rp-section label,
+.rank-section label,
+.match-entry input {
+    font-size: 18px;
+    color: #555;
+}
+
+input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    padding: 15px 30px;  /* Increased padding for larger button */
+    font-size: 20px;  /* Larger font size */
+    border-radius: 8px;  /* Rounded corners for the button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.feedback-message {
+    color: red;
+    font-size: 14px;
+}
+
+/* Match Entry Input */
+.match-entry {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#add-match-btn {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#add-match-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f6f9;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Rank Selection Styling */
+select {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+select:focus {
+    background-color: #eaf1f7;
+    border-color: #4CAF50;
+}
+
+/* Feedback and Alerts */
+.feedback-message {
+    color: red;
+    font-size: 14px;
+}
+
+#starting-rp-feedback {
+    color: green;
+    font-size: 14px;
+}
+
+#match-feedback {
+    color: red;
+    font-size: 14px;
+}
