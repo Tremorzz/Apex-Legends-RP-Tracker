@@ -1,100 +1,85 @@
-# Apex-Legends-RP-Tracker
-Overview:
-The Apex Legends RP Tracker is a web-based application designed to help players track their Ranked Points (RP) progress in Apex Legends. The application provides a user-friendly interface to monitor RP gains and losses, visualize progress over time, and analyze performance in ranked matches.
+# Match Data Tracker
 
-Features:
-    Real-Time RP Tracking: Automatically fetches and displays your current RP from the Apex Legends API.
-    Match History: View your match history, including kills, assists, deaths, and RP changes.
-    Performance Metrics: Analyze your performance with detailed statistics, such as average kills per match and win rates.
-    Progress Visualization: Interactive graphs and charts to visualize your RP progression over time.
-    Alerts and Notifications: Set alerts for RP milestones or when you drop below a certain RP threshold.
-    User Authentication: Secure user authentication to protect your data.
-Technologies Used:
-    Frontend: React.js, Redux, Chart.js
-    Backend: Node.js, Express.js
-    Database: MongoDB
-    API: Apex Legends API for fetching player data
-    Authentication: JSON Web Tokens (JWT)
-Installation
+The **Match Data Tracker** is a web-based application designed to track match performance in ranked gaming scenarios. This application calculates RP (Ranked Points) based on kills, assists, participation, placement, and rank. It also allows customization of penalties associated with different ranks.
 
-Prerequisites:
-    Node.js (v14 or later)
-    MongoDB (local or Atlas)
-    Git
-Clone the Repository:
+---
 
-bash
+## Features
 
-git clone https://github.com/yourusername/apex-legends-rp-tracker.git
-cd apex-legends-rp-tracker
+- **Starting RP Management:** Users can set an initial RP value as the starting point.
+- **Match Data Input:** Input fields for kills, assists, participation percentage, and placement.
+- **Rank Selection:** Dropdown menu to select the player's current rank.
+- **RP Calculation:** Calculates RP earned for each match based on input data.
+- **Dynamic Penalties:** Allows customization of RP penalties for each rank.
+- **Rank Updates:** Automatically adjusts the rank when RP exceeds the threshold for the current rank.
+- **Match History:** Tracks and displays match history in a table format.
 
-Setup Environment Variables
+---
 
-Create a .env file in the root directory and add the following variables:
+## Technologies Used
 
-makefile
+- **HTML:** For structuring the application layout.
+- **CSS:** For styling the interface.
+- **JavaScript:** For dynamic calculations, data processing, and interactive functionalities.
 
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-APEX_API_KEY=your_apex_api_key
+---
 
-Install Dependencies:
+## Getting Started
 
-bash
+### Prerequisites
 
-npm install
+- A web browser (e.g., Chrome, Firefox, Edge).
 
-Start the Development Server:
+### Setup
 
-bash
+1. Download or clone the repository to your local machine.
+2. Open the `index.html` file in your preferred web browser.
 
-npm run dev
+---
 
-The application should now be running on http://localhost:3000.
+## Usage
 
-Usage:
+1. **Set Starting RP**
+   - Enter the starting RP value in the "Starting RP" input field.
+   - Click the "Set Starting RP" button to initialize the tracker.
 
-Register/Login: Create an account or log in to your existing account.
-Link Your Account: Connect your Apex Legends account using your in-game username and platform (Origin, Steam, etc.).
-Track Your RP: Access your dashboard to view your RP history, match statistics, and progress visualizations.
+2. **Input Match Data**
+   - Fill in the match details:
+     - **Kills**: Total number of kills.
+     - **Assists**: Total number of assists.
+     - **Participation (%):** A percentage value for participation.
+     - **Placement**: Position in the match (1 = 1st place, etc.).
+     - **Rank**: Select the current rank from the dropdown menu.
+   - Click the "Process Match Data" button to calculate and display the results.
 
-API Documentation:
+3. **View Match History**
+   - Processed match data will be displayed in the table at the bottom of the page.
 
-The application uses the Apex Legends API to fetch player data. Here are the main endpoints:
+---
 
-GET /api/player/{username}/{platform}: Fetch player data, including current RP and match history.
-POST /api/auth/register: Register a new user.
-POST /api/auth/login: Log in an existing user.
-GET /api/stats/{userId}: Fetch performance metrics for the logged-in user.
+## File Structure
 
-Testing:
-To run tests, ensure you have all dependencies installed and execute:
+- **index.html**: Contains the structure and elements of the application.
+- **style.css**: Contains the styles for the application (optional).
+- **script.js**: Contains the JavaScript logic for RP calculation and rank management.
 
-bash
+---
 
-npm test
+## Future Enhancements
 
-Contributing:
-We welcome contributions! 
+- Add **export to CSV** functionality for match history.
+- Include detailed visualizations, such as charts for performance tracking.
+- Enhance rank thresholds to support new game updates.
+- Add authentication for saving match data to a user account.
 
-To contribute:
-Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Make your changes and commit them (git commit -m 'Add your feature').
-Push to the branch (git push origin feature/YourFeature).
-Open a Pull Request.
+---
 
-License:
+## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments:
-Apex Legends API
-React
-Node.js
-MongoDB
+---
 
-Contact:
-For questions, suggestions, or issues, feel free to reach out via GitHub Issues or contact me at theodoresmith2028@gmail.com.
+## Contributions
 
-Thank you for using the Apex Legends RP Tracker! Happy gaming!
-
+Contributions are welcome! Feel free to fork this repository, submit issues, or open pull requests to enhance the application.
