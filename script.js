@@ -19,6 +19,8 @@ function processMatchData() {
     const assists = parseInt(document.getElementById('assists').value);
     const participation = parseInt(document.getElementById('participation').value) || 0;
     const placement = parseInt(document.getElementById('placement').value);
+    const challengerRP = parseInt(document.getElementById('challenger').value);
+    const top5 = parseInt(document.getElementById('top5').value);
     const rankSelect = document.getElementById('rank');
     const rank = rankSelect.value;
     let rpEarned = 0;
@@ -67,6 +69,9 @@ function processMatchData() {
         rpEarned -= 20;
     }
 
+    rpEarned += challengerRP;
+    rpEarned += top5;
+
     startingRP += rpEarned;
     totalRP = startingRP;
 
@@ -81,6 +86,8 @@ function processMatchData() {
         <td>${assists}</td>
         <td>${participation}</td>
         <td>${placement}</td>
+        <td>${challengerRP}</td>
+        <td>${top5}</td>
         <td>${rpEarned}</td>
         <td>${startingRP}</td>
     `;
@@ -90,6 +97,8 @@ function processMatchData() {
     document.getElementById('assists').value = '';
     document.getElementById('participation').value = '';
     document.getElementById('placement').value = '';
+    document.getElementById('challenger').value = '';
+    document.getElementById('top5').value = '';
 }
 
 function updateRank(rankSelect) {
