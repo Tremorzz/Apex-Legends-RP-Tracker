@@ -35,25 +35,25 @@ function processMatchData() {
 
     // Calculate RP earned based on placement
     if (placement >= 16) {
-        rpEarned = (kills + assists + effectiveParticipation) * 10;
+        rpEarned = (kills + assists + effectiveParticipation) * 4;
     } else if (placement >= 11) {
-        rpEarned = 5 + (kills + assists + effectiveParticipation) * 10;
+        rpEarned = 5 + (kills + assists + effectiveParticipation) * 6;
     } else if (placement >= 9) {
-        rpEarned = 10 + (kills + assists + effectiveParticipation) * 12;
+        rpEarned = 10 + (kills + assists + effectiveParticipation) * 8;
     } else if (placement >= 7) {
-        rpEarned = 20 + (kills + assists + effectiveParticipation) * 14;
+        rpEarned = 20 + (kills + assists + effectiveParticipation) * 10;
     } else if (placement === 6) {
-        rpEarned = 30 + (kills + assists + effectiveParticipation) * 16;
+        rpEarned = 40 + (kills + assists + effectiveParticipation) * 10;
     } else if (placement === 5) {
-        rpEarned = 45 + (kills + assists + effectiveParticipation) * 16;
+        rpEarned = 45 + (kills + assists + effectiveParticipation) * 12;
     } else if (placement === 4) {
-        rpEarned = 55 + (kills + assists + effectiveParticipation) * 16;
+        rpEarned = 55 + (kills + assists + effectiveParticipation) * 14;
     } else if (placement === 3) {
-        rpEarned = 70 + (kills + assists + effectiveParticipation) * 18;
+        rpEarned = 75 + (kills + assists + effectiveParticipation) * 16;
     } else if (placement === 2) {
-        rpEarned = 95 + (kills + assists + effectiveParticipation) * 22;
+        rpEarned = 100 + (kills + assists + effectiveParticipation) * 18;
     } else if (placement === 1) {
-        rpEarned = 125 + (kills + assists + effectiveParticipation) * 26;
+        rpEarned = 125 + (kills + assists + effectiveParticipation) * 20;
     }
 
     // Subtract RP based on selected rank
@@ -62,11 +62,13 @@ function processMatchData() {
     } else if (rank.startsWith("Diamond")) {
         rpEarned -= 65;
     } else if (rank.startsWith("Platinum")) {
-        rpEarned -= 45;
+        rpEarned -= 48;
     } else if (rank.startsWith("Gold")) {
-        rpEarned -= 35;
+        rpEarned -= 38;
     } else if (rank.startsWith("Silver")) {
         rpEarned -= 20;
+    }else if (rank.startsWith("Bronze")) {
+        rpEarned -= 10;
     }
 
     rpEarned += challengerRP;
